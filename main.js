@@ -17,7 +17,6 @@ userEta = prompt("Quanti anni hai?");
 // moltiplicare i chilometri da percorrere per la costante 0.21€
 userTotaleParziale = userChilometri * euroPerChilometro;
 // calcolare lo sconto
-let arrotondamento = userTotale.toFixed(2);
 // se età < 18 anni sconto 20%
 if(userEta < 18){
     userTotale = userTotaleParziale - (userTotaleParziale * 20 / 100);
@@ -34,5 +33,6 @@ else{
     messaggio = `Il prezzo del tuo biglietto è ${arrotondamento}€`;
 }
 
+let arrotondamento = userTotale.toFixed(2);
 
 document.getElementById("mio_id").innerHTML = messaggio;
