@@ -18,24 +18,24 @@ userEta = prompt("Quanti anni hai?");
 userTotaleParziale = userChilometri * euroPerChilometro;
 
 // calcolare lo sconto
-let arrotondamento = userTotale.toFixed(2);
+// let arrotondamento = userTotale.toFixed(2);
 
 // se età < 18 anni sconto 20%
 if(userEta < 18){
     userTotale = userTotaleParziale - (userTotaleParziale * 20 / 100);
-    messaggio = `Giovanotto il prezzo del tuo biglietto è ${arrotondamento}€`;
+    messaggio = `Giovanotto il prezzo del tuo biglietto è ${userTotale.toFixed(2)}€`;
 }
 
 // se età > 65 anni sconto 40%
 else if(userEta >= 65){
     userTotale = userTotaleParziale - (userTotaleParziale * 40 / 100);
-    messaggio = `Nonno il prezzo del tuo biglietto è ${arrotondamento}€`;
+    messaggio = `Nonno il prezzo del tuo biglietto è ${userTotale.toFixed(2)}€`;
 }
 
 // età compresa tra 18 e 64 senza sconto
 else{
     userTotale = userTotaleParziale;
-    messaggio = `Il prezzo del tuo biglietto è ${arrotondamento}€`;
+    messaggio = `Il prezzo del tuo biglietto è ${userTotale.toFixed(2)}€`;
 }
 
 
